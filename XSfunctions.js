@@ -23,6 +23,19 @@
 		  }
 		  return arr
 		}
+
+	//reshape 1D array into 2D array
+	  function reshape(arr, rows, cols) {
+	      const result = new Array(rows);
+	      for (let row = 0; row < rows; row++) {
+		result[row] = new Array(cols);
+	      }
+	      for (let row = 0; row < rows; row++) {
+		for (let col = 0; col < cols; col++) {
+		  result[row][col] = arr[row * cols + col];
+		}
+	      }
+	      return result;}
 		
 	//project: orthognal projection of xp,yp to a line spanning x1,y1 to x2,y2
 	function project(xp, yp, x1, y1, x2, y2) {
